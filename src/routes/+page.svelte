@@ -3,17 +3,17 @@
   import Hero from '../assets/images/hero.png'
 	import { BadgePercent, Clock1, Gift, Smartphone } from 'lucide-svelte';
 
-  import { onNavigate } from '$app/navigation'
+  // import { onNavigate } from '$app/navigation'
 
-  onNavigate((navigation) => {
-    if(!document.startviewTransition) return 
-  })
+  // onNavigate((navigation) => {
+  //   if(!document.startviewTransition) return 
+  // })
 
-  // old snapshot
-  document.startViewTransition(() => {
-    // dom change
-    // new snapshot
-  })
+  // // old snapshot
+  // document.startViewTransition(() => {
+  //   // dom change
+  //   // new snapshot
+  // })
 </script>
 
 <div class="pb-6">
