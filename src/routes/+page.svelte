@@ -3,22 +3,22 @@
   import Hero from '../assets/images/hero.png'
 	import { BadgePercent, Clock1, Gift, Smartphone } from 'lucide-svelte';
 
-  // import { onNavigate } from '$app/navigation'
+  import { onNavigate } from '$app/navigation'
 
-  // onNavigate((navigation) => {
-  //   if(!document.startviewTransition) return 
-  // })
+  onNavigate((navigation) => {
+    if(!document.startviewTransition) return 
+  })
 
-  // // old snapshot
-  // document.startViewTransition(() => {
-  //   // dom change
-  //   // new snapshot
-  // })
+  // old snapshot
+  document.startViewTransition(() => {
+    // dom change
+    // new snapshot
+  })
 </script>
 
-<div class=" bg-primary-900 pb-6">
-  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <header class="mb-8 flex items-center justify-between py-4">
+<div class="pb-6">
+  <div class="">
+    <header class="flex items-center justify-between py-4 bg-primary-900 px-4 lg:px-8">
       <!-- logo - start -->
       <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
         <img src={Logo} class="w-20 lg:w-36" alt="">
@@ -34,23 +34,23 @@
       <!-- buttons - end -->
     </header>
 
-    <section id="hero" class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 md:flex-row">
+    <section id="hero" class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 md:flex-row bg-tertiary-300 px-4 py-4">
       <!-- content - start -->
       <div class="flex flex-col justify-center text-center lg:py-12 xl:w-5/12 xl:py-24">
-        <p class="mb-4 font-semibold text-white md:mb-6 md:text-lg xl:text-xl">Conheca nossa linha completa de produtos!</p>
+        <p class="mb-4 font-semibold text-tertiary-900 md:mb-6 md:text-lg xl:text-xl">Conheca nossa linha completa de produtos!</p>
 
-        <h1 class="mb-8 text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Inovacao na palma da sua mao</h1>
+        <h1 class="mb-8 text-4xl font-bold  text-primary-700  sm:text-5xl md:mb-12 md:text-6xl">Inovacao na palma da sua mao</h1>
 
         <!-- <p class="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.</p> -->
 
         <div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center">
-          <a href="#" class="btn btn-md md:btn-xl hover:variant-filled-tertiary variant-filled-primary">Saiba mais</a>
+          <a href="#" class="btn btn-md md:btn-xl hover:variant-filled-tertiary variant-filled-primary hover:text-2xl">Saiba mais</a>
         </div>
       </div>
       <!-- content - end -->
 
       <!-- image - start -->
-      <div class="overflow-hidden rounded-lg bg-tertiary-300 shadow-lg xl:w-1/2 w-full">
+      <div class="overflow-hidden rounded-lg xl:w-1/2 w-full">
         <img src={Hero} loading="lazy" alt="Photo by Fakurian Design" class="h-full w-full object-cover object-center" />
       </div>
       <!-- image - end -->
@@ -78,11 +78,11 @@
     </section> -->
 
     <section>
-      <div class="py-6 sm:py-8 lg:py-12">
+      <div class="py-6 sm:py-8 lg:py-12 bg-primary-300">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
           <!-- text - start -->
           <div class="mb-10 md:mb-16">
-            <h2 class="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">Nossos beneficios</h2>
+            <h2 class="mb-4 text-center text-2xl font-bold  text-secondary-900 md:mb-6 lg:text-3xl">Nossos beneficios</h2>
       
             <!-- <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p> -->
           </div>
