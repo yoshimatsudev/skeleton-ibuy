@@ -1,61 +1,72 @@
 <script lang="ts">
-  import Logo from '../assets/images/logo.png'
-  import Hero from '../assets/images/hero.png'
-	import { BadgePercent, Clock1, Gift, Smartphone } from 'lucide-svelte';
-
-  // import { onNavigate } from '$app/navigation'
-
-  // onNavigate((navigation) => {
-  //   if(!document.startviewTransition) return 
-  // })
-
-  // // old snapshot
-  // document.startViewTransition(() => {
-  //   // dom change
-  //   // new snapshot
-  // })
+	import Hero from '../assets/images/hero.png';
+	import { BadgePercent, Clock1, Gift, Navigation, Smartphone } from 'lucide-svelte';
+	import { fly, draw } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	import { flip } from 'svelte/animate';
 </script>
 
-<div class="pb-6">
-  <div class="">
-    <header class="flex items-center justify-between py-4 bg-primary-900 px-4 lg:px-8">
-      <!-- logo - start -->
-      <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
-        <img src={Logo} class="w-20 lg:w-36" alt="">
-      </a>
-      <!-- logo - end -->
+<div>
+	<div>
+		<section
+			id="hero"
+			class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 md:flex-row bg-tertiary-300 px-4 py-4"
+		>
+			<!-- content - start -->
+			<div
+				class="flex flex-col justify-center text-center lg:py-12 xl:w-5/12 xl:py-24"
+				transition:fly={{
+					delay: 250,
+					duration: 300,
+					x: -5000,
+					y: -100,
+					opacity: 0.5,
+					easing: quintOut
+				}}
+			>
+				<p class="mb-4 font-bold text-black md:mb-6 md:text-lg xl:text-3xl">
+					Conheca nossa linha completa de produtos!
+				</p>
 
-      <!-- nav - start -->
- 
-      <!-- nav - end -->
+				<h1
+					class="mb-8 text-4xl font-bold text-primary-700 sm:text-5xl md:mb-12 md:text-6xl"
+				>
+					Inovacao<br /> na palma da sua mao
+				</h1>
+				<div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center">
+					<a
+						href="#"
+						class="btn btn-md md:btn-xl hover:variant-filled-tertiary variant-filled-primary"
+						>Saiba mais</a
+					>
+				</div>
+				<!-- <p class="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.</p> -->
+			</div>
 
-      <!-- buttons - start -->
-      <a href="#" class="btn btn-md lg:btn-lg hover:variant-filled-tertiary variant-filled-primary text-white">Falar no whatsapp</a>
-      <!-- buttons - end -->
-    </header>
+			<!-- content - end -->
 
-    <section id="hero" class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 md:flex-row bg-tertiary-300 px-4 py-4">
-      <!-- content - start -->
-      <div class="flex flex-col justify-center text-center lg:py-12 xl:w-5/12 xl:py-24">
-        <p class="mb-4 font-semibold text-tertiary-900 md:mb-6 md:text-lg xl:text-xl">Conheca nossa linha completa de produtos!</p>
-
-        <h1 class="mb-8 text-4xl font-bold  text-primary-700  sm:text-5xl md:mb-12 md:text-6xl">Inovacao na palma da sua mao</h1>
-
-        <!-- <p class="mb-8 leading-relaxed text-gray-500 md:mb-12 lg:w-4/5 xl:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.</p> -->
-
-        <div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center">
-          <a href="#" class="btn btn-md md:btn-xl hover:variant-filled-tertiary variant-filled-primary hover:text-2xl">Saiba mais</a>
-        </div>
-      </div>
-      <!-- content - end -->
-
-      <!-- image - start -->
-      <div class="overflow-hidden rounded-lg xl:w-1/2 w-full">
-        <img src={Hero} loading="lazy" alt="Photo by Fakurian Design" class="h-full w-full object-cover object-center" />
-      </div>
-      <!-- image - end -->
-    </section>
-<!-- 
+			<!-- image - start -->
+			<div
+				class="overflow-hidden rounded-lg xl:w-1/2 w-full"
+				transition:fly={{
+					delay: 250,
+					duration: 350,
+					x: -5000,
+					y: -100,
+					opacity: 0.5,
+					easing: quintOut
+				}}
+			>
+				<img
+					src={Hero}
+					loading="eager"
+					alt="Photo by Fakurian Design"
+					class="h-full w-full object-cover object-center"
+				/>
+			</div>
+			<!-- image - end -->
+		</section>
+		<!-- 
     <section id="newsletter" class="py-5">
       <div class="bg py-6 sm:py-8 lg:py-12">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -77,86 +88,130 @@
       </div>
     </section> -->
 
-    <section>
-      <div class="py-6 sm:py-8 lg:py-12 bg-primary-300">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-          <!-- text - start -->
-          <div class="mb-10 md:mb-16">
-            <h2 class="mb-4 text-center text-2xl font-bold  text-secondary-900 md:mb-6 lg:text-3xl">Nossos beneficios</h2>
-      
-            <!-- <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p> -->
-          </div>
-          <!-- text - end -->
-      
-          <div class="grid gap-8 md:grid-cols-2 md:gap-12 xl:gap-16 place-content-center">
-            <!-- feature - start -->
-            <div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                <Gift />
-              </div>
-      
-              <div class="self-center">
-                <!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
-                <p class="mb-2 text-white text-2xl ">Brindes exclusivos</p>
-               
-              </div>
-            </div>
-            <!-- feature - end -->
-      
-            <!-- feature - start -->
-            <div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                <BadgePercent />
-              </div>
-      
-              <div class="self-center">
-                <!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
-                <p class="mb-2 text-white text-2xl ">Descontos especiais</p>
-               
-              </div>
-            </div>
-            <!-- feature - end -->
-      
-            <!-- feature - start -->
-            <div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                <Clock1 />
-              </div>
-      
-              <div class="self-center">
-                <!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
-                <p class="mb-2 text-white text-2xl">Prioridade no atendimento</p>
-               
-              </div>
-            </div>
-            <!-- feature - end -->
-      
-            <!-- feature - start -->
-            <div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
-              <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-indigo-500 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl">
-                <Smartphone />
-              </div>
-      
-              <div class="self-center">
-                <!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
-                <p class="mb-2 text-white text-2xl">Pre-venda com descontos</p>
-               
-              </div>
-            </div>
-            <!-- feature - end -->
-      
-            <!-- feature - start -->
-           
-            <!-- feature - end -->
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+		<section>
+			<div class="py-6 sm:py-8 lg:py-12 bg-primary-500">
+				<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+					<!-- text - start -->
+					<div class="mb-10 md:mb-16">
+						<h2
+							class="mb-4 text-center text-2xl font-extrabold text-white md:mb-6 lg:text-3xl"
+						>
+							Nossos beneficios
+						</h2>
+
+						<!-- <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p> -->
+					</div>
+					<!-- text - end -->
+
+					<div class="grid gap-8 md:grid-cols-2 md:gap-12 xl:gap-16 place-content-center">
+						<!-- feature - start -->
+						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center text-white">
+							<div
+								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
+							>
+								<Gift />
+							</div>
+
+							<div class="self-center">
+								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								<p class="mb-2 text-white font-bold text-2xl">Brindes exclusivos</p>
+							</div>
+						</div>
+						<!-- feature - end -->
+
+						<!-- feature - start -->
+						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
+							<div
+								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
+							>
+								<BadgePercent />
+							</div>
+
+							<div class="self-center">
+								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								<p class="mb-2 text-white font-bold text-2xl">
+									Descontos especiais
+								</p>
+							</div>
+						</div>
+						<!-- feature - end -->
+
+						<!-- feature - start -->
+						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
+							<div
+								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
+							>
+								<Clock1 />
+							</div>
+
+							<div class="self-center">
+								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								<p class="mb-2 text-white font-bold text-2xl">
+									Prioridade no atendimento
+								</p>
+							</div>
+						</div>
+						<!-- feature - end -->
+
+						<!-- feature - start -->
+						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
+							<div
+								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
+							>
+								<Smartphone />
+							</div>
+
+							<div class="self-center">
+								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								<p class="mb-2 text-white font-bold text-2xl">
+									Pre-venda com descontos
+								</p>
+							</div>
+						</div>
+
+						<div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center">
+							<a
+								href="#"
+								class="btn btn-md md:btn-xl hover:variant-filled-tertiary variant-filled-secondary"
+								>Saiba mais</a
+							>
+						</div>
+						<!-- feature - end -->
+
+						<!-- feature - start -->
+
+						<!-- feature - end -->
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
 
 <style>
-  .teste {
-    color: #9647ef
-  }
+	.teste {
+		color: #9647ef;
+	}
+
+	h1,
+	h2,
+	h3,
+	span {
+		view-transition-name: move-elements;
+	}
+
+	@keyframes left-to-center {
+		from {
+			margin-left: -50%;
+		}
+
+		to {
+			margin-left: 50%;
+		}
+	}
+
+	::view-transition-old(move-elements),
+	::view-transition-new(move-elements) {
+		margin: left-to-center;
+	}
 </style>
