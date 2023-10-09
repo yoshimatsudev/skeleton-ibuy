@@ -10,7 +10,7 @@
 	<div>
 		<section
 			id="hero"
-			class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 md:flex-row bg-tertiary-300 px-4 py-4"
+			class="flex flex-col justify-center md:justify-between gap-6 sm:gap-10 md:gap-16 md:flex-row px-4 py-4 h-screen bg-gradient-to-b variant-gradient-tertiary-primary"
 		>
 			<!-- content - start -->
 			<div
@@ -33,10 +33,10 @@
 				>
 					Inovacao<br /> na palma da sua mao
 				</h1>
-				<div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center">
+				<div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center self-center">
 					<a
 						href="#"
-						class="btn btn-md md:btn-xl hover:variant-filled-tertiary variant-filled-primary"
+						class="btn btn-md max-w-xs md:btn-xl hover:variant-filled-tertiary variant-filled-primary"
 						>Saiba mais</a
 					>
 				</div>
@@ -88,10 +88,10 @@
       </div>
     </section> -->
 
-		<section>
+		<!-- <section>
 			<div class="py-6 sm:py-8 lg:py-12 bg-primary-500">
 				<div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-					<!-- text - start -->
+					 text - start 
 					<div class="mb-10 md:mb-16">
 						<h2
 							class="mb-4 text-center text-2xl font-extrabold text-white md:mb-6 lg:text-3xl"
@@ -99,12 +99,11 @@
 							Nossos beneficios
 						</h2>
 
-						<!-- <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p> -->
+						<p class="mx-auto max-w-screen-md text-center text-white md:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p> 
 					</div>
-					<!-- text - end -->
+
 
 					<div class="grid gap-8 md:grid-cols-2 md:gap-12 xl:gap-16 place-content-center">
-						<!-- feature - start -->
 						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center text-white">
 							<div
 								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
@@ -113,13 +112,11 @@
 							</div>
 
 							<div class="self-center">
-								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								 <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3>
 								<p class="mb-2 text-white font-bold text-2xl">Brindes exclusivos</p>
 							</div>
 						</div>
-						<!-- feature - end -->
 
-						<!-- feature - start -->
 						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
 							<div
 								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
@@ -128,15 +125,15 @@
 							</div>
 
 							<div class="self-center">
-								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								<h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> 
 								<p class="mb-2 text-white font-bold text-2xl">
 									Descontos especiais
 								</p>
 							</div>
 						</div>
-						<!-- feature - end -->
+						 feature - end 
 
-						<!-- feature - start -->
+						feature - start 
 						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
 							<div
 								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
@@ -145,15 +142,13 @@
 							</div>
 
 							<div class="self-center">
-								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								 <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> 
 								<p class="mb-2 text-white font-bold text-2xl">
 									Prioridade no atendimento
 								</p>
 							</div>
 						</div>
-						<!-- feature - end -->
-
-						<!-- feature - start -->
+	
 						<div class="flex gap-4 md:gap-6 p-2 rounded-2xl self-center">
 							<div
 								class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary-900 text-white shadow-lg md:h-14 md:w-14 md:rounded-xl"
@@ -162,7 +157,7 @@
 							</div>
 
 							<div class="self-center">
-								<!-- <h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3> -->
+								<h3 class="mb-2 text-lg font-semibold md:text-xl">Growth</h3>
 								<p class="mb-2 text-white font-bold text-2xl">
 									Pre-venda com descontos
 								</p>
@@ -176,15 +171,10 @@
 								>Saiba mais</a
 							>
 						</div>
-						<!-- feature - end -->
-
-						<!-- feature - start -->
-
-						<!-- feature - end -->
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 	</div>
 </div>
 
